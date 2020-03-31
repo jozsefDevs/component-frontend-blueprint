@@ -19,7 +19,7 @@ jobs:
       - name: Deploy to Surge platform
         uses: dswistowski/surge-sh-action@v1
         with:
-          domain: 'ci-cd-frontend-blueprint-staging.surge.sh'
+          domain: 'component-frontend-blueprint-staging.surge.sh'
           project: './build'
           login: ${{ secrets.SURGE_LOGIN }}
           token: ${{ secrets.SURGE_TOKEN }}
