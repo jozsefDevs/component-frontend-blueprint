@@ -13,13 +13,13 @@ jobs:
           node-version: '12.16.x'
       - run: yarn install
       - run: yarn build
-      - run: yarn test
-        env:
-          CI: true
-      - name: Deploy to Surge platform
-        uses: dswistowski/surge-sh-action@v1
-        with:
-          domain: 'component-frontend-blueprint-staging.surge.sh'
-          project: './build'
-          login: ${{ secrets.SURGE_LOGIN }}
-          token: ${{ secrets.SURGE_TOKEN }}
+#      - run: yarn test
+#        env:
+#          CI: true
+#      - name: Deploy to Surge platform
+#        uses: dswistowski/surge-sh-action@v1
+#        with:
+#          domain: 'component-frontend-blueprint-staging.surge.sh'
+#          project: './build'
+#          login: ${{ secrets.SURGE_LOGIN }}
+#          token: ${{ secrets.SURGE_TOKEN }}

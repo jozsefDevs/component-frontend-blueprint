@@ -7,10 +7,12 @@
   "version": "0.0.0-development",
   "private": true,
   "dependencies": {
-    "react": "^16.13.1"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "webpack --mode=production"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -28,13 +30,20 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-react": "^7.9.4",
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
     "@semantic-release/changelog": "^5.0.0",
     "@semantic-release/git": "^9.0.0",
+    "babel-loader": "^8.1.0",
     "husky": "^4.2.3",
     "semantic-release": "^17.0.4",
-    "surge": "^0.21.3"
+    "surge": "^0.21.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
   },
   "engines": {
     "node": ">=12.16.0",
