@@ -15,12 +15,14 @@
     "react-dom": "^16.13.1"
   },
   "scripts": {
-    "test": "yarn type-check",
+    "test": "yarn type-check && yarn lint",
     "type-check": "tsc --noEmit",
     "type-check:watch": "yarn type-check -- --watch",
     "build:types": "tsc --emitDeclarationOnly",
     "build:js": "webpack --progress --mode=production",
-    "build": "yarn build:types && yarn build:js"
+    "build": "yarn build:types && yarn build:js",
+    "lint": "eslint src/**/*{.ts,.tsx} --format=pretty",
+    "format": "prettier --write src/**/*.{js,jsx,ts,tsx,json,css,scss,md}"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -51,8 +53,20 @@
     "@semantic-release/git": "^9.0.0",
     "@types/react": "^16.9.29",
     "@types/react-dom": "^16.9.5",
+    "@typescript-eslint/eslint-plugin": "^2.26.0",
     "babel-loader": "^8.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-typescript": "^7.2.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-formatter-pretty": "^3.0.1",
+    "eslint-plugin-eslint-comments": "^3.1.2",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.19.0",
     "husky": "^4.2.3",
+    "lint-staged": "^10.1.1",
+    "prettier": "^2.0.2",
     "semantic-release": "^17.0.4",
     "surge": "^0.21.3",
     "typescript": "^3.8.3",
