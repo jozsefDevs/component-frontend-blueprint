@@ -1,9 +1,12 @@
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent } from "react";
 
 export interface HelloProps {
-    name: string;
+  name: string;
 }
 
 export const Hello: FunctionComponent<HelloProps> = ({ name }) => (
-    <h1>{ name }<span>WORLD</span></h1>
+  <h1>
+    {name}
+    <span>WORLD</span>
+  </h1>
 );
