@@ -1,12 +1,10 @@
 import React, { FunctionComponent } from "react";
 
 export interface HelloProps {
+  /** Name property to display */
   name: string;
 }
 
 export const Hello: FunctionComponent<HelloProps> = ({ name }) => (
-  <h1>
-    {name}
-    <span>WORLD</span>
-  </h1>
+  <h1>{name}</h1>
 );

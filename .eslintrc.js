@@ -2,7 +2,7 @@
  * React rules: https://github.com/yannickcr/eslint-plugin-react/tree/master/docs/rules
  */
 module.exports = {
-    ignorePatterns: ["*.config.js", "node_modules/", "dist"],
+    ignorePatterns: ["*.config.js", "node_modules/", "dist", "*.stories.tsx"],
     parserOptions: {
         project: `./tsconfig.json`
     },
