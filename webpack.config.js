@@ -31,6 +31,11 @@ module.exports = (env, options) => {
                     }
                 }
             ]
+        },
+        externals: {
+          'react': 'react',
+          'react-dom': 'react-dom',
+          'react-router': 'react-router',
         }
     }
 };

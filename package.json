@@ -8,9 +8,11 @@
   "module": "dist/index.js",
   "typings": "dist/types/index.d.ts",
   "unpkg": "dist/index.js",
-  "version": "0.0.0-development",
-  "private": true,
-  "dependencies": {
+  "files": [
+    "dist"
+  ],
+  "version": "0.0.3",
+  "peerDependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
@@ -20,7 +22,7 @@
     "type-check:watch": "yarn type-check -- --watch",
     "build:types": "tsc --emitDeclarationOnly",
     "build:js": "webpack --progress --mode=production",
-    "build": "yarn build:types && yarn build:js",
+    "build": "rimraf dist && yarn build:types && yarn build:js",
     "lint": "eslint src/**/*{.ts,.tsx} --format=pretty",
     "format": "prettier --write src/**/*.{js,jsx,ts,tsx,json,css,scss,md}",
     "storybook": "start-storybook -s ./public -p 9001",
@@ -81,6 +83,7 @@
     "lint-staged": "^10.1.1",
     "prettier": "^2.0.2",
     "react-docgen-typescript-loader": "^3.7.2",
+    "rimraf": "^3.0.2",
     "semantic-release": "^17.0.4",
     "surge": "^0.21.3",
     "typescript": "^3.8.3",
@@ -95,6 +98,7 @@
     "type": "git",
     "url": "https://github.com/jozsefDevs/component-frontend-blueprint.git"
   },
+  "private": true,
   "publishConfig": {
     "access": "restricted"
   }
