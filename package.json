@@ -1,24 +1,32 @@
 {
-  "name": "ci-cd-frontend-blueprint",
+  "name": "component-frontend-blueprint",
+  "author": {
+    "email": "gubijo@gmail.com",
+    "name": "Jozsef Gubicza"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "typings": "dist/types/index.d.ts",
+  "unpkg": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "version": "0.0.0-development",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0",
-    "react-scripts": "3.4.0"
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "semantic-release": "semantic-release"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "test": "yarn type-check && yarn lint",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "yarn type-check -- --watch",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:js": "webpack --progress --mode=production",
+    "build": "rimraf dist && yarn build:types && yarn build:js",
+    "lint": "eslint src/**/*{.ts,.tsx} --format=pretty",
+    "format": "prettier --write src/**/*.{js,jsx,ts,tsx,json,css,scss,md}",
+    "storybook": "start-storybook -s ./public -p 9001",
+    "build-storybook": "build-storybook -c .storybook -o .storybook-build"
   },
   "browserslist": {
     "production": [
@@ -33,13 +41,54 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-react": "^7.9.4",
+    "@babel/preset-typescript": "^7.9.0",
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
     "@semantic-release/changelog": "^5.0.0",
     "@semantic-release/git": "^9.0.0",
+    "@storybook/addon-a11y": "^5.3.18",
+    "@storybook/addon-backgrounds": "^5.3.18",
+    "@storybook/addon-centered": "^5.3.18",
+    "@storybook/addon-info": "^5.3.18",
+    "@storybook/addon-knobs": "^5.3.18",
+    "@storybook/addon-viewport": "^5.3.18",
+    "@storybook/addons": "^5.3.18",
+    "@storybook/react": "^5.3.18",
+    "@types/react": "^16.9.29",
+    "@types/react-dom": "^16.9.5",
+    "@types/storybook__addon-a11y": "^5.1.2",
+    "@types/storybook__addon-centered": "^5.2.1",
+    "@types/storybook__addon-info": "^5.2.1",
+    "@types/storybook__addon-knobs": "^5.2.1",
+    "@types/storybook__addon-viewport": "^5.2.1",
+    "@types/storybook__react": "^5.2.1",
+    "@typescript-eslint/eslint-plugin": "^2.26.0",
+    "babel-loader": "^8.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-typescript": "^7.2.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-formatter-pretty": "^3.0.1",
+    "eslint-plugin-eslint-comments": "^3.1.2",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.19.0",
     "husky": "^4.2.3",
+    "lint-staged": "^10.1.1",
+    "prettier": "^2.0.2",
+    "react-docgen-typescript-loader": "^3.7.2",
+    "rimraf": "^3.0.2",
     "semantic-release": "^17.0.4",
-    "surge": "^0.21.3"
+    "surge": "^0.21.3",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
   },
   "engines": {
     "node": ">=12.16.0",
@@ -47,8 +96,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jozsefDevs/ci-cd-frontend-blueprint.git"
+    "url": "https://github.com/jozsefDevs/component-frontend-blueprint.git"
   },
+  "private": true,
   "publishConfig": {
     "access": "restricted"
   }

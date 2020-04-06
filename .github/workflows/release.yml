@@ -9,14 +9,12 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: '12.16.x'
       - run: yarn install
-      - run: yarn build
       - run: yarn test
         env:
-            CI: true
+          CI: true
+      - run: yarn build
+      - run: yarn build-storybook
       - name: Semantic Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -25,7 +23,7 @@ jobs:
       - name: Deploy to Surge platform
         uses: dswistowski/surge-sh-action@v1
         with:
-          domain: 'ci-cd-frontend-blueprint.surge.sh'
-          project: './build'
+          domain: 'component-frontend-blueprint.surge.sh'
+          project: './.storybook-build'
           login: ${{ secrets.SURGE_LOGIN }}
           token: ${{ secrets.SURGE_TOKEN }}
