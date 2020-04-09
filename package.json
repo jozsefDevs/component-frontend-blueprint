@@ -11,7 +11,7 @@
   "files": [
     "dist"
   ],
-  "version": "1.0.0",
+  "version": "1.0.1",
   "peerDependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
@@ -99,6 +99,8 @@
     "url": "https://github.com/jozsefDevs/component-frontend-blueprint.git"
   },
   "publishConfig": {
-    "publishConfig": { "registry": "https://npm.pkg.github.com/" }
+    "publishConfig": {
+      "registry": "https://npm.pkg.github.com/"
+    }
   }
 }

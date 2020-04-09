@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/jozsefDevs/component-frontend-blueprint/compare/v1.0.0...v1.0.1) (2020-04-09)
+
+
+### Bug Fixes
+
+* **publish:** trying Github Packages publish ([83ca524](https://github.com/jozsefDevs/component-frontend-blueprint/commit/83ca5244df9f449dd46372fa6cca60bab7751aee))
+
 # 1.0.0 (2020-04-06)
 
 
