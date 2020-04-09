@@ -1,5 +1,5 @@
 {
-  "name": "component-frontend-blueprint",
+  "name": "@jozsefDevs/component-frontend-blueprint",
   "author": {
     "email": "gubijo@gmail.com",
     "name": "Jozsef Gubicza"
@@ -98,8 +98,7 @@
     "type": "git",
     "url": "https://github.com/jozsefDevs/component-frontend-blueprint.git"
   },
-  "private": true,
   "publishConfig": {
-    "access": "restricted"
+    "publishConfig": { "registry": "https://npm.pkg.github.com/" }
   }
 }
