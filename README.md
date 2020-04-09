@@ -18,7 +18,11 @@ Create React App, because it's an exploded setup. Feel free to modify according 
 
 - [Storybook](https://storybook.js.org/) to have a nice preview of what components we're having in our lib.
 
-- CI/CD workflows via [Github Actions](https://github.com/features/actions) 
+- CI/CD workflows via [Github Actions](https://github.com/features/actions)
+
+  * [Semantic release](https://www.npmjs.com/package/semantic-release) is ensuring every time a `develop -> master` merge
+    happens we auto-generate a `CHANGELOG.md` and also updating the `package.json` with the correct version number. 
+  * For each `master` release an npm package published to [Github Packages](https://github.com/features/packages)
 
 - Continous delivery to [Surge.sh](https://surge.sh) platform for Storybook live previews 
 

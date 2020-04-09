@@ -27,3 +27,12 @@ jobs:
           project: './.storybook-build'
           login: ${{ secrets.SURGE_LOGIN }}
           token: ${{ secrets.SURGE_TOKEN }}
+      - name: Publish to GH Packages
+        run: |
+          echo "@jozsefDevs:registry=https://npm.pkg.github.com/" > .npmrc
+          echo "//npm.pkg.github.com/:always-auth=true" >> .npmrc
+          echo "//npm.pkg.github.com/:email=JozsefDevs <jozsefDevs@users.noreply.github.com>" >> .npmrc
+          echo "//npm.pkg.github.com/:_authToken=$GH_TOKEN" >> .npmrc
+          yarn publish
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
