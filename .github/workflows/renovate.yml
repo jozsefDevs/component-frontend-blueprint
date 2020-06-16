@@ -1,0 +1,21 @@
+name: Test Renovate + Dependabot updates
+on:
+  push:
+    branches:
+      - renovate/**
+      - dependabot/**
+  pull_request:
+    branches:
+      - renovate/**
+      - dependabot/**
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: yarn install
+      - run: yarn test
+        env:
+          CI: true
+      - run: yarn build
+      - run: yarn build-storybook
