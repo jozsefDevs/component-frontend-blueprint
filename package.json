@@ -67,7 +67,7 @@
     "@types/storybook__addon-knobs": "5.2.1",
     "@types/storybook__addon-viewport": "5.2.1",
     "@types/storybook__react": "5.2.1",
-    "@typescript-eslint/eslint-plugin": "2.34.0",
+    "@typescript-eslint/eslint-plugin": "3.7.0",
     "babel-loader": "8.1.0",
     "eslint": "7.5.0",
     "eslint-config-airbnb-typescript": "9.0.0",

@@ -4,7 +4,7 @@ export interface CounterState {
   value: number;
 }
 
-export class Counter extends Component<{}, CounterState> {
+export class Counter extends Component<unknown, CounterState> {
   readonly state: CounterState = { value: 0 };
 
   private handleIncrement = (): void =>
