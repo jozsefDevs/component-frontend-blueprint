@@ -1,3 +1,16 @@
+# [1.1.0](https://github.com/jozsefDevs/component-frontend-blueprint/compare/v1.0.1...v1.1.0) (2020-07-22)
+
+
+### Bug Fixes
+
+* **react-type:** get rid of separate types/react because of the linked issue below. ([d252198](https://github.com/jozsefDevs/component-frontend-blueprint/commit/d252198d6e409a92ce64583e268b3824c6a54266))
+* **types:** due to typescript-eslint version increase small bugs fixed ([4d16fa7](https://github.com/jozsefDevs/component-frontend-blueprint/commit/4d16fa7f7a3c88d1f6a67ebb0c4c924d13af5e3f))
+
+
+### Features
+
+* **renovate:** adding config for a friendlier Renovate automation ([e07e06c](https://github.com/jozsefDevs/component-frontend-blueprint/commit/e07e06cf911591d75658c3bf08da1d886f21eac9))
+
 ## [1.0.1](https://github.com/jozsefDevs/component-frontend-blueprint/compare/v1.0.0...v1.0.1) (2020-04-09)
 
 
