@@ -1,8 +1,18 @@
-import { storiesOf } from "@storybook/react";
 import { Hello } from "./Hello";
-import { text } from "@storybook/addon-knobs";
 import * as React from "react";
 
-storiesOf("HelloComponent", module).add("with text", () => (
-  <Hello name={text("Hello Text", "Hello World! TypeScript + Storybook")} />
-));
+export default {
+  title: "Hello Component",
+  component: Hello,
+};
+
+export const WithText = (
+  args: JSX.IntrinsicAttributes &
+    import("./Hello").HelloProps & { children?: React.ReactNode }
+) => <Hello {...args} />;
+
+WithText.storyName = "with text";
+
+WithText.args = {
+  name: "Hello World! TypeScript + Storybook",
+};

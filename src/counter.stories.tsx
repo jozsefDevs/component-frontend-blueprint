@@ -1,5 +1,11 @@
-import * as React from "react";
-import { storiesOf } from "@storybook/react";
 import { Counter } from "./Counter";
+import * as React from "react";
 
-storiesOf("CounterComponent", module).add("with text", () => <Counter />);
+export default {
+  title: "Counter Component",
+  component: Counter,
+};
+
+export const Default = () => <Counter />;
+
+Default.storyName = "default";
