@@ -58,7 +58,7 @@
     "@storybook/react": "6.0.21",
     "@types/react-dom": "16.9.8",
     "@typescript-eslint/eslint-plugin": "4.1.1",
-    "babel-loader": "8.1.0",
+    "babel-loader": "9.2.1",
     "eslint": "7.9.0",
     "eslint-config-airbnb-typescript": "9.0.0",
     "eslint-config-prettier": "6.11.0",
